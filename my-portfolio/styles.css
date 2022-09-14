@@ -54,11 +54,13 @@ header {
 }
 
 .about:hover {
-  box-shadow: 0px 10px 5px red;
+  box-shadow: 0px 8px 15px white;
   cursor: pointer;
+  color: red
 }
 
 .projects:hover {
-  box-shadow: 0px 10px 5px red;
+  box-shadow: 0px 8px 15px white;
   cursor: pointer;
+  color: red;
 }

@@ -1,5 +1,9 @@
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+const pointLight = new THREE.PointLight(0xffffff);
+pointLight.position.set(35, 35, 35);
+scene.add(pointLight);
+
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#background')
 });
@@ -16,12 +20,6 @@ const material = new THREE.MeshStandardMaterial({ map: earthTexture, normalMap: 
 const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(35, 35, 35);
-
-const ambientLight = new THREE.AmbientLight(0xffffff);
-
-scene.add(pointLight);
 
 // function addStar() {
 //   const geometry = new THREE.SphereGeometry(.25, 24, 23);
